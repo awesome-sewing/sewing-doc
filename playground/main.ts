@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
-import './style.css';
 import App from './App.vue';
-import sewing from '../src/index';
-console.log(sewing);
+import { SewingDocElement } from '../src/index';
+console.log('SewingDocElement', SewingDocElement);
 
+customElements.define('sewing-doc', SewingDocElement);
 createApp(App).mount('#app');
