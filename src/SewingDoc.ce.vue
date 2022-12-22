@@ -8,17 +8,17 @@ const props = defineProps<{
 
 const content = ref('');
 
-const cdnPath = props.prefix || 'https://7365-sewing-server-7gzbk8qb24381a2f-1258716334.tcb.qcloud.la/doc/';
-// b69f67c063070157129bff0551cbbf4f
+const cdnPath = props.prefix || 'https://api.sewingapp.work/v1/';
+
 watch(
   props,
   (val, oldVal) => {
     if (val.id !== oldVal?.id || val.prefix !== oldVal?.prefix) {
-      fetch(cdnPath + val.id + '.json')
+      fetch(cdnPath + val.id)
         .then((res) => res.json())
         .then((res) => {
           console.log(res);
-          content.value = res.content;
+          content.value = res.data.content;
         });
     }
   },
@@ -29,11 +29,21 @@ watch(
 </script>
 
 <template>
-  <div class="prose mx-auto focus:outline-none min-h-screen pt-20 pb-16" v-html="content"></div>
+  <div class="prose focus:outline-none sewing" v-html="content"></div>
 </template>
 
 <style>
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sewing {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
 </style>

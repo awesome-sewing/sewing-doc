@@ -4,14 +4,15 @@
   "keywords": [],
   "author": "Sewing",
   "license": "MIT",
-  "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/sewing-doc.es.js",
+  "module": "dist/sewing-doc.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^18.11.17",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -19,10 +20,13 @@
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "@vitejs/plugin-vue": "^3.0.3",
+    "autoprefixer": "^10.4.13",
     "eslint": "^8.23.1",
     "eslint-config-alloy": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-vue": "^9.4.0",
+    "postcss": "^8.4.20",
+    "postcss-import": "^15.1.0",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.6.4",
