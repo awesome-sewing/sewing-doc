@@ -1,6 +1,6 @@
 {
   "name": "sewing-doc",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "keywords": [],
   "author": "Sewing",
   "license": "MIT",
@@ -11,12 +11,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "@types/node": "^18.11.17",
-    "vue": "^3.2.37"
-  },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
+    "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "@vitejs/plugin-vue": "^3.0.3",
@@ -31,6 +28,7 @@
     "tailwindcss": "^3.1.8",
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
+    "vue": "^3.2.37",
     "vue-tsc": "^0.40.13"
   }
 }
