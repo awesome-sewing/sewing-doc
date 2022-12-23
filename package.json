@@ -1,14 +1,20 @@
 {
   "name": "sewing-doc",
-  "version": "1.0.2",
-  "keywords": [],
+  "version": "1.0.3",
+  "keywords": [
+    "sewing",
+    "sewing doc",
+    "what's new",
+    "changelog"
+  ],
   "author": "Sewing",
   "license": "MIT",
   "main": "dist/sewing-doc.es.js",
   "module": "dist/sewing-doc.es.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit -d && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
