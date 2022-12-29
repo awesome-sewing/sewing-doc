@@ -32,11 +32,7 @@ watch(
   <div class="prose focus:outline-none sewing" v-html="content"></div>
 </template>
 
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+<style scoped>
 .sewing {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -46,4 +42,8 @@ watch(
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
     'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 </style>
