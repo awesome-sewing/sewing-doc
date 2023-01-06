@@ -3,4 +3,5 @@ import { defineCustomElement } from 'vue';
 
 const SewingDocElement = defineCustomElement(SewingDoc);
 
-export { SewingDoc, SewingDocElement };
+export { SewingDocElement };
+export default SewingDocElement;
