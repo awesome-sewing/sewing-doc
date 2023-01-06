@@ -1,5 +1,5 @@
 # sewing doc
-sewing doc是sewing app (https://app.sewingapp.work/s/) 的SDK工具。
+sewing doc是sewing app (https://www.sewingapp.work) 的SDK工具。
 
 ## 安装
 
