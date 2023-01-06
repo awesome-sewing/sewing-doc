@@ -4,7 +4,7 @@ sewing doc是sewing app (https://app.sewingapp.work/s/) 的SDK工具。
 ## 安装
 
 ```
-npm i sewing-doc
+npm i sewing-doc -S
 ```
 
 ## 使用
