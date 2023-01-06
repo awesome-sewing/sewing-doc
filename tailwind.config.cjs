@@ -7,7 +7,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            'max-width': '96ch',
+            'max-width': 'none',
             'font-size': '0.9rem',
             li: {
               p: {

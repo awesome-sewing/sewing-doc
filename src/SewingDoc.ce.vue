@@ -32,7 +32,7 @@ watch(
   <div class="prose focus:outline-none sewing" v-html="content"></div>
 </template>
 
-<style scoped>
+<style>
 .sewing {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;

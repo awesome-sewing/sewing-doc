@@ -4,21 +4,14 @@
 </script>
 
 <template>
-  <div>
-    <sewing-doc id="b69f67c063070157129bff0551cbbf4f"></sewing-doc>
+  <div class="mx-auto">
+    <sewing-doc id="b37532966319bab5000459f43f8aa26e"></sewing-doc>
   </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.mx-auto {
+  width: 50vw;
+  margin: auto;
 }
 </style>
