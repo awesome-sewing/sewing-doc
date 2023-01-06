@@ -8,13 +8,13 @@ const props = defineProps<{
 
 const content = ref('');
 
-const cdnPath = props.prefix || 'https://api.sewingapp.work/v1/';
+const cdnPath = props.prefix || 'https://api.sewingapp.work/v2/';
 
 watch(
   props,
   (val, oldVal) => {
     if (val.id !== oldVal?.id || val.prefix !== oldVal?.prefix) {
-      fetch(cdnPath + val.id)
+      fetch(cdnPath + '?id=' + val.id)
         .then((res) => res.json())
         .then((res) => {
           console.log(res);
