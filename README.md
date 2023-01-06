@@ -15,14 +15,3 @@ import { SewingDocElement } from 'sewing-doc';
 
 customElements.define('sewing-doc', SewingDocElement);
 ```
-
-```javascript
-// use as Vue component
-import { SewingDoc } from 'sewing-doc';
-
-export default {
-  components: {
-    SewingDoc
-  }
-}
-```
