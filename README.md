@@ -1,10 +1,10 @@
 # sewing doc
-sewing doc是sewing app (https://app.sewingapp.work/s/)的SDK工具。
+sewing doc是sewing app (https://www.sewingapp.work) 的SDK工具。
 
 ## 安装
 
 ```
-npm i sewing-doc
+npm i sewing-doc -S
 ```
 
 ## 使用
@@ -14,15 +14,4 @@ npm i sewing-doc
 import { SewingDocElement } from 'sewing-doc';
 
 customElements.define('sewing-doc', SewingDocElement);
-```
-
-```javascript
-// use as Vue component
-import { SewingDoc } from 'sewing-doc';
-
-export default {
-  components: {
-    SewingDoc
-  }
-}
 ```
