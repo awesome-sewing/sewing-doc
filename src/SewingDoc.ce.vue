@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watch, ref } from 'vue';
+import { watchEffect, ref } from 'vue';
 
 const props = defineProps<{
   id: string;
@@ -7,25 +7,19 @@ const props = defineProps<{
 }>();
 
 const content = ref('');
-
 const cdnPath = props.prefix || 'https://api.sewingapp.work/v2/';
 
-watch(
-  props,
-  (val, oldVal) => {
-    if (val.id !== oldVal?.id || val.prefix !== oldVal?.prefix) {
-      fetch(cdnPath + '?id=' + val.id)
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          content.value = res.data.content;
-        });
-    }
-  },
-  {
-    immediate: true,
-  },
-);
+watchEffect(() => {
+  fetch(cdnPath + '?id=' + props.id)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      content.value = res.data.content;
+    })
+    .catch((err) => {
+      console.error('[sewing doc error]' + err);
+    });
+});
 </script>
 
 <template>
