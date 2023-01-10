@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-child-content -->
 <script setup lang="ts">
 import { watchEffect, ref } from 'vue';
 
@@ -13,7 +14,6 @@ watchEffect(() => {
   fetch(cdnPath + '?id=' + props.id)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       content.value = res.data.content;
     })
     .catch((err) => {
@@ -24,6 +24,12 @@ watchEffect(() => {
 
 <template>
   <div class="prose focus:outline-none sewing" v-html="content"></div>
+  <div v-if="content === ''" class="animate-pulse">
+    <div class="h-5 bg-slate-200 rounded mb-3"></div>
+    <div class="h-5 bg-slate-200 rounded mb-3 w-3/4"></div>
+    <div class="h-5 bg-slate-200 rounded mb-3 w-1/2"></div>
+    <div class="h-5 bg-slate-200 rounded mb-3 w-1/2"></div>
+  </div>
 </template>
 
 <style>
